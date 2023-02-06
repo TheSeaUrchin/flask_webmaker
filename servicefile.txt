@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to service sname
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=filepath
+Environment="PATH=filepath/snameenv/bin"
+ExecStart=filepath/snameenv/bin/uwsgi --ini sname.ini
+
+[Install]
+WantedBy=multi-user.target
