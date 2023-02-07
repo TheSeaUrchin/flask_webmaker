@@ -6,7 +6,7 @@ After=network.target
 User=root
 Group=www-data
 WorkingDirectory=filepath
-Environment="PATH=filepath/snameenv/bin"
+Environment="PATH=filepath/envi/bin"
 ExecStart=filepath/snameenv/bin/uwsgi --ini sname.ini
 
 [Install]
