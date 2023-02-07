@@ -13,7 +13,8 @@ sname = input("service name:")
 serversn = input("server names:")
 
 rep("sname.ini","sname",sname)
-os.rename("sname.ini",f"{sname}.ini")
+os.rename("wsgi.py",f"{filepath}/wsgi.py")
+os.rename("sname.ini",f"{filepath}/{sname}.ini")
 
 rep("servicefile.txt","filepath",filepath)
 rep("servicefile.txt","sname",sname)
