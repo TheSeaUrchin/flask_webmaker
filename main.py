@@ -11,6 +11,7 @@ def rep(filename,search,replace):
 filepath = input("path:")
 sname = input("service name:")
 serversn = input("server names:")
+env = input("enviornment name:")
 
 rep("sname.ini","sname",sname)
 os.rename("wsgi.py",f"{filepath}/wsgi.py")
@@ -27,6 +28,7 @@ os.system(f"sudo systemctl enable {sname}")
 rep("nginx.txt","sname",sname)
 rep("nginx.txt","filepath",filepath)
 rep("nginx.txt","serversn",serversn)
+rep("nginx.txt","envi",env)
 
 dat = ""
 with open("nginx.txt",'r') as file:
