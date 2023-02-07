@@ -19,6 +19,7 @@ os.rename("sname.ini",f"{filepath}/{sname}.ini")
 
 rep("servicefile.txt","filepath",filepath)
 rep("servicefile.txt","sname",sname)
+rep("servicefile.txt","envi",env)
 
 os.rename("servicefile.txt",f"/etc/systemd/system/{sname}.service")
 os.system(f"sudo systemctl start {sname}")
@@ -28,7 +29,7 @@ os.system(f"sudo systemctl enable {sname}")
 rep("nginx.txt","sname",sname)
 rep("nginx.txt","filepath",filepath)
 rep("nginx.txt","serversn",serversn)
-rep("nginx.txt","envi",env)
+
 
 dat = ""
 with open("nginx.txt",'r') as file:
