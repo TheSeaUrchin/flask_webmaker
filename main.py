@@ -11,12 +11,15 @@ def rep(filename,search,replace):
 filepath = input("path:")
 sname = input("service name:")
 serversn = input("server names:")
+env = input("enviornment name:")
 
 rep("sname.ini","sname",sname)
-os.rename("sname.ini",f"{sname}.ini")
+os.rename("wsgi.py",f"{filepath}/wsgi.py")
+os.rename("sname.ini",f"{filepath}/{sname}.ini")
 
 rep("servicefile.txt","filepath",filepath)
 rep("servicefile.txt","sname",sname)
+rep("servicefile.txt","envi",env)
 
 os.rename("servicefile.txt",f"/etc/systemd/system/{sname}.service")
 os.system(f"sudo systemctl start {sname}")
@@ -26,6 +29,7 @@ os.system(f"sudo systemctl enable {sname}")
 rep("nginx.txt","sname",sname)
 rep("nginx.txt","filepath",filepath)
 rep("nginx.txt","serversn",serversn)
+
 
 dat = ""
 with open("nginx.txt",'r') as file:

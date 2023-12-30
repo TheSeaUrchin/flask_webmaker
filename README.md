@@ -2,7 +2,7 @@ In order to use Flask Webmaker, please make sure you are using a virtual environ
 
 To make a virtual enviornment, first run
 
-``` pip install virtualenv```
+```pip install virtualenv```
 
 Then make your environment using
 
